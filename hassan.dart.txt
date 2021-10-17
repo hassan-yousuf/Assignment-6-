@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+import 'package:myapp/home.dart';
+
+class Hassan extends StatefulWidget {
+  const Hassan({Key? key}) : super(key: key);
+
+  @override
+  _HassanState createState() => _HassanState();
+}
+
+class _HassanState extends State<Hassan> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.cyan,
+            leading: GestureDetector(
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => Home()));
+              },
+              child: Icon(Icons.backspace_rounded),
+            ),
+            title: TextField(
+              cursorColor: Colors.white,
+            ),
+          ),
+        ));
+  }
+}

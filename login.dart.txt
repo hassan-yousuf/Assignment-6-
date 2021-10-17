@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+import 'package:myapp/home.dart';
+
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
+
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            appBar: AppBar(
+              backgroundColor: Colors.cyan,
+              leading: GestureDetector(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (_) => Home()));
+                },
+                child: Icon(Icons.backspace_rounded),
+              ),
+              title: Text("Settings"),
+            ),
+            backgroundColor: Colors.white,
+            body: Column(children: [
+              OutlinedButton(onPressed: () {}, child: Text("Account")),
+              SizedBox(
+                height: 55,
+              ),
+              OutlinedButton(onPressed: () {}, child: Text("Chats")),
+              SizedBox(
+                height: 55,
+              ),
+              OutlinedButton(onPressed: () {}, child: Text("Notifications")),
+              SizedBox(
+                height: 55,
+              ),
+              OutlinedButton(onPressed: () {}, child: Text("Storage and data")),
+              SizedBox(
+                height: 55,
+              ),
+              OutlinedButton(onPressed: () {}, child: Text("Help")),
+              SizedBox(
+                height: 55,
+              ),
+              OutlinedButton(onPressed: () {}, child: Text("Invite a friend")),
+            ])));
+  }
+}

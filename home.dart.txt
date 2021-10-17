@@ -1,0 +1,300 @@
+import 'package:flutter/material.dart';
+import 'package:myapp/login.dart';
+import 'package:myapp/hassan.dart';
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  get leading => null;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        theme: ThemeData(
+          primaryColor: const Color(0xFF177767),
+        ),
+        debugShowCheckedModeBanner: false,
+        home: DefaultTabController(
+            length: 4,
+            child: Scaffold(
+                appBar: AppBar(
+                    backgroundColor: Color(0xFF177767),
+                    title: Text("WhatsApp"),
+                    bottom: TabBar(
+                      tabs: [
+                        Tab(
+                          icon: Icon(Icons.camera_alt),
+                        ),
+                        Tab(
+                          text: "CHATS",
+                        ),
+                        Tab(
+                          text: "STATUS",
+                        ),
+                        Tab(
+                          text: "CALLS",
+                        )
+                      ],
+                    ),
+                    actions: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => Hassan()));
+                        },
+                        child: Icon(Icons.search),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (_) => Login()));
+                        },
+                        child: Icon(Icons.more_vert),
+                      ),
+                    ]),
+                body: SingleChildScrollView(
+                  child: Column(children: [
+                    ListTile(
+                      title: Text("Hassan"),
+                      subtitle: Text("Kese ho"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                      ),
+                      trailing: Column(children: [
+                        Text("02:45"),
+                        Container(
+                            width: 25,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.green,
+                              child: Text(
+                                "6",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )),
+                      ]),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Lateef"),
+                      subtitle: Text("Allah Hafiz"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://images.pexels.com/photos/2486168/pexels-photo-2486168.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                      ),
+                      trailing: Column(children: [
+                        Text("05:49"),
+                        Container(
+                            width: 25,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.green,
+                              child: Text(
+                                "3",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ))
+                      ]),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Yousuf"),
+                      subtitle: Text("Hy"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://archziner.com/wp-content/uploads/2020/07/air-jordan-hoodie-worn-by-man-wearing-purge-mask-with-neon-lights-super-cool-wallpapers-holding-pink-smoke-bomb.jpg"),
+                      ),
+                      trailing: Column(children: [
+                        Text("10:36"),
+                        Container(
+                          width: 25,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.green,
+                            child: Text(
+                              "1",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        )
+                      ]),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Mehmmod"),
+                      subtitle: Text("Yar nh"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://wallpapercave.com/wp/wp2646303.jpg"),
+                      ),
+                      trailing: Column(children: [
+                        Text("09:13"),
+                        Container(
+                            width: 25,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.green,
+                              child: Text(
+                                "9",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ))
+                      ]),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Ammar"),
+                      subtitle: Text("Bye"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWiIRe2TfTaXXQoADd_zlTyR0aN5xnN3fJbQ&usqp=CAU"),
+                      ),
+                      trailing: Column(children: [
+                        Text("03:04"),
+                        Container(
+                            width: 25,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.green,
+                              child: Text(
+                                "5",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ))
+                      ]),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Muddasir"),
+                      subtitle: Text("Ok"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://wallpaperaccess.com/full/1622642.jpg"),
+                      ),
+                      trailing: Column(
+                        children: [
+                          Text("01:50"),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Bilal"),
+                      subtitle: Text("Nh Bilal"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://pakpublishers.com/wallpapers/vehicles/cars/1/cool-3D-blue-car-Wallpaper-Best-A411-34027672.jpeg"),
+                      ),
+                      trailing: Column(
+                        children: [
+                          Text("07:30"),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Muhammad Ali"),
+                      subtitle: Text("Bhai Bt Suno"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://image.shutterstock.com/image-photo/3d-wallpaper-beautiful-flower-background-260nw-1385636237.jpg"),
+                      ),
+                      trailing: Column(
+                        children: [
+                          Text("04:59"),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Furqan"),
+                      subtitle: Text("Pagal Ho Gai Ho"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://image.shutterstock.com/image-illustration/3d-nature-water-animals-wallpaper-260nw-1615723393.jpg"),
+                      ),
+                      trailing: Column(
+                        children: [
+                          Text("11:06"),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Owais"),
+                      subtitle: Text("Aisa Nh Hota"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://lh3.googleusercontent.com/proxy/I-mHa8qlhmmnCcOzuKNE6dr7Ye2pQPeVC5KXzZHbZwrZpy4xuCyNKSDQkeyTBZb6WKBYGT6GfygWgLKwuW52o3tzHE5LcL0Ff3UAaioujXZOD4e-lMuBqx290rkQMoKiPH7vRZeSkKQUfg"),
+                      ),
+                      trailing: Column(
+                        children: [
+                          Text("05:33"),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Rafay"),
+                      subtitle: Text("Yr Bhai"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG53rLH9QpsXetZXZMxoi53YDV99eQmfQtng&usqp=CAU"),
+                      ),
+                      trailing: Column(
+                        children: [
+                          Text("12:04"),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      title: Text("Rizwan"),
+                      subtitle: Text("Usko Dekho"),
+                      leading: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: NetworkImage(
+                            "https://c4.wallpaperflare.com/wallpaper/170/585/299/lion-4k-pictures-for-large-desktop-wallpaper-preview.jpg"),
+                      ),
+                      trailing: Column(
+                        children: [
+                          Text("06:02"),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ]),
+                ))));
+  }
+}
